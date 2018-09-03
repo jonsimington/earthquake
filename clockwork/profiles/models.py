@@ -47,11 +47,11 @@ def create_user_profile(sender, instance, created, **kwargs):
 
 @receiver(pre_save, sender=UserProfile)
 def user_profile_pre_save(sender, instance, **kwargs):
-    clean_rendered = bleach.clean(instance.about_me,
-                                  tags=settings.ALLOWED_HTML_TAGS,
-                                  attributes=settings.ALLOWED_HTML_ATTRS)
-    instance.rendered_about_me = clean_rendered
-
+    # clean_rendered = bleach.clean(instance.about_me,
+    #                               tags=settings.ALLOWED_HTML_TAGS,
+    #                               attributes=settings.ALLOWED_HTML_ATTRS)
+    # instance.rendered_about_me = clean_rendered
+    pass
 
 # A user's application for more access to the site
 class Application(models.Model):
