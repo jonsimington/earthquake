@@ -2,7 +2,7 @@ import os
 
 SETTINGS_DIR = os.path.dirname(os.path.dirname(__file__))
 PROJECT_DIR = os.path.dirname(SETTINGS_DIR)
-PYBB_DIR = '/home/jonsimington/clockwork.pw/pybb/'
+PYBB_DIR = '/home/jon/earthquake/pybb/'
 PYBB_AVATAR_DIR = os.path.join(PYBB_DIR, 'avatar/')
 PYBB_AVATAR_WIDTH = '110px'
 PYBB_AVATAR_HEIGHT = '110px'
@@ -180,7 +180,7 @@ USE_TZ = False
 ###################################################################
 
 STATIC_URL = '/static/'
-STATIC_ROOT = '/home/jonsimington/clockwork.pw/static/'
+STATIC_ROOT = '/home/jon/earthquake/clockwork/static/'
 
 ###################################################################
 #
@@ -247,4 +247,6 @@ ALLOWED_HOSTS = [
     'localhost',
     'clockwork.pw',
     '.clockwork.pw',
+    'earthquake.simington.io',
+    '192.168.1.187',
 ]
