@@ -50,7 +50,7 @@ a:hover {
 }
 
 .background {
-    background-image: url('/static/img/background.png');
+    background-image: url('/static/img/bfa_background.png');
     text-align: center;
     margin-bottom: 25px;
     background-repeat: no-repeat;
