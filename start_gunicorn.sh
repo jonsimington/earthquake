@@ -1,1 +1,1 @@
-gunicorn clockwork.wsgi:application --bind localhost:8001
+gunicorn earthquake.wsgi:application --bind localhost:8001

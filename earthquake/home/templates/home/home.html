@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {% if user.is_authenticated %}
+    &lt;earthquake&gt; News
+  {% else %}
+    &lt;earthquake&gt; US - Sargeras
+  {% endif %}
+{% endblock %}
+
+{% block logo %}
+  <link rel="stylesheet" href="{{ STATIC_URL }}css/home_style.css">
+  <div class="background">
+    <div class="logo">
+      <a href="/" title="earthquake">
+	<img src="/static/img/logo.png"/>
+      </a>
+    </div>
+  </div>
+{% endblock %}
+  
+{% block content %}
+  {% if not user.profile.has_submitted_app and user.is_authenticated %}
+    <div class="alert alert-warning text-center" role="alert">
+      <h5>It appears you haven't submitted an application yet.  Do that <strong><a href="/application/submit/">here</a></strong>!</h5>
+    </div>
+  {% endif %}
+      
+  {% include "home/_blog.html" %}
+
+  <div class="col-lg-3 pull-right">
+    {% include "home/_home_sidebar.html" %}
+  </div>
+  
+</div>
+{% endblock content %}

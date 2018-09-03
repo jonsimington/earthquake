@@ -1,4 +1,4 @@
-cd clockwork
+cd earthquake
 
 # comment urls
 mv urls.py urls.py.old

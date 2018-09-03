@@ -1,6 +1,0 @@
-{% if topic.updated %}
-  by <a href="{{ topic.last_post.get_absolute_url }}">{{ topic.last_post.user }}</a> 
-  <br>
-  {{ topic.updated|date:"F d Y, h:i A" }}
-{% endif %}
-

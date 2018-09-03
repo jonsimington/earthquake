@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% load url from future %}
+{% load crispy_forms_tags %}
+{% load comments %}
+{% load group_tags %}
+
+{% block title %}
+  &lt;earthquake&gt; Application
+{% endblock %}
+
+{% block content %}
+  <h1 class="text-center">
+    {% if user|has_group:"Member" or user|has_group:"Officer" %}
+      Edit your Character Information
+    {% else %}
+      {% if user.profile.has_submitted_app %}
+        Update
+      {% else %}
+        Submit
+      {% endif %} your Application to &lt;earthquake&gt;
+    {% endif %}
+  </h1>
+  <div class="well">
+    {% crispy form %}
+
+    <div id="comments">
+      <h1> Comments about your Application:</h1>
+
+      {% render_comment_list for user.application %}
+    </div>
+    <hr>
+    <h1>Post a comment:</h1>
+    {% render_comment_form for user.application %}
+  </div>
+{% endblock %}
+
+{% block sidebar %}
+
+{% endblock %}

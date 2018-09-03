@@ -1,0 +1,203 @@
+{% load comments %}
+{% load application_tags %}
+{% load group_tags %}
+
+<div class="col-md-3">
+  Main Character
+</div>
+<div class="col-md-9">
+  <div class="well">
+    {{ applicant.application.main_character }}
+  </div>
+</div>
+
+<hr>
+
+<div class="col-md-3">
+  Character Class
+</div>
+<div class="col-md-9">
+  <div class="well" style="width:100%">
+    {{ applicant.application.char_class }}
+  </div>
+</div>
+
+<hr>
+
+<div class="col-md-3">
+  Primary Spec
+</div>
+<div class="col-md-9">
+  <div class="well">
+    {{ applicant.application.char_spec }}
+  </div>
+</div>
+
+<hr>
+
+<div class="col-md-3">
+  Armory Link
+</div>
+<div class="col-md-9">
+  <div class="well">
+    {{ applicant.application.armory_link }}
+  </div>
+</div>
+
+<hr>
+
+<div class="col-md-3">
+  Recent Parses
+</div>
+<div class="col-md-9">
+  <div class="well">
+    {{ applicant.application.recent_parses|linebreaks }}
+  </div>
+</div>
+
+<hr>
+
+<div class="col-md-3">
+  Screenshot
+</div>
+<div class="col-md-9">
+  <div class="well">
+    {{ applicant.application.screenshot|linebreaks }}
+  </div>
+</div>
+
+<hr>
+
+<div class="col-md-3">
+  Addons
+</div>
+<div class="col-md-9">
+  <div class="well">
+    {{ applicant.application.addons|linebreaks }}
+  </div>
+</div>
+
+<hr>
+
+<div class="col-md-3">
+  Computer Specs
+</div>
+<div class="col-md-9">
+  <div class="well">
+    {{ applicant.application.computer_specs|linebreaks }}
+  </div>
+</div>
+
+<hr>
+
+<div class="col-md-3">
+  Authenticator?
+</div>
+<div class="col-md-9">
+  <div class="well">
+    {{ applicant.application.authenticator }}
+  </div>
+</div>
+
+<hr>
+
+<div class="col-md-3">
+  Over 18?
+</div>
+<div class="col-md-9">
+  <div class="well">
+    {{ applicant.application.over_18 }}
+  </div>
+</div>
+
+<hr>
+
+<div class="col-md-3">
+  How did you hear about earthquake?
+</div>
+<div class="col-md-9">
+  <div class="well">
+    {{ applicant.application.how_did_you_hear|linebreaks }}
+  </div>
+</div>
+
+<hr>
+
+<div class="col-md-3">
+  Tell us about your previous guild
+</div>
+<div class="col-md-9">
+  <div class="well">
+    {{ applicant.application.previous_guild|linebreaks }}
+  </div>
+</div>
+
+<hr>
+
+<div class="col-md-3">
+  Tell us about your previous raiding experience.
+</div>
+<div class="col-md-9">
+  <div class="well">
+    {{ applicant.application.experience|linebreaks }}
+  </div>
+</div>
+
+<br />
+
+<div class="col-md-3">
+  Battle Tag
+</div>
+<div class="col-md-9">
+  <div class="well">
+    {{ applicant.application.battle_tag }}
+  </div>
+</div>
+
+<br />
+
+{% if user.is_staff %}
+  <!-- Trial / Accept / Decline Buttons -->
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <script src="{{ STATIC_URL }}js/applications.js"></script>
+      &nbsp;
+      {% if app_type != "trial" %}
+        <a class="btn btn-warning" onclick="trial('{{ applicant.username }}')">Trial Application</a>
+      {% endif %}
+      <a class="btn btn-success" onclick="accept('{{ applicant.username }}')">Accept Application</a>
+      <a class="btn btn-danger" onclick="decline('{{ applicant.username }}')">Decline Application</a>
+    </div>
+    <div class="col-md-3"></div>
+    <br>
+    <br>
+  </div>
+{% endif %}
+
+
+<script src="{{ STATIC_URL }}js/applications.js"></script>
+  
+<a id="{{ applicant.username }}-comments"></a>
+  
+<h1>Comments for {{ applicant.username }}'s Application:</h1>
+<div class="well">{% render_comment_list for applicant.application %}</div>
+
+{% if user|has_group:"Member" or user|has_group:"Officer" %}
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading" data-toggle="collapse" data-target="#c{{ applicant }}"
+	   href="#c{{ applicant }}" >
+	<h4 class="panel-title">
+	  Post a Comment
+	  <span class="pull-right fa fa-angle-down"></span>
+	</h4>
+      </div>
+      <div id="c{{ applicant }}" class="panel-collapse collapse">
+	<div class="panel-body">
+	  {% render_comment_form for applicant.application %}
+	</div>
+      </div>
+    </div>
+  </div>
+{% endif %}

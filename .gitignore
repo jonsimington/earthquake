@@ -2,7 +2,7 @@
 pybb/
 
 # migrations
-clockwork/*/migrations/
+earthquake/*/migrations/
 
 # media
 uploads/

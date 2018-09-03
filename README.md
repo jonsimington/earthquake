@@ -1,10 +1,10 @@
-Guild website for <Clockwork> US-Sargeras
+Guild website for <earthquake> US-Sargeras
 
 Getting Set Up
 --------------
 
 - Clone this project, and place it in a friendly place.
-- ``cd clockwork.pw``
+- ``cd earthquake.pw``
 - Make sure you have pip installed, then run 'pip install -r requirements.txt'
 
 NOTE: Due to some bugs with zinnia, we have to comment out zinnia's modules before migrating using the following script:
