@@ -1,21 +1,43 @@
-django-crispy-forms
-django
-bleach
-django-allauth
-postmarkup
-pygments
+-e git+https://github.com/jonsimington/bbcode.git@08aa9253e480434637a65202824ee4c33b827942#egg=bbcode
+beautifulsoup4==4.6.3
+bleach==2.1.4
+certifi==2018.8.24
+chardet==3.0.4
+Django==1.7.11
+django-allauth==0.17.0
+django-annoying==0.8.2
+django-blog-zinnia==0.15.1
+django-bootstrap-form==3.4
+django-bootstrap3==11.0.0
+django-contrib-comments==1.5
+django-crispy-forms==1.7.2
 django-haystack==1.1.0
-django-mailer
-whoosh
+django-js-asset==1.1.0
+django-mailer==1.2.5
+-e git+https://github.com/jonsimington/django-messages.git@ca8a144a2cf9a3d2175d64a401d43fc8bf2b6586#egg=django_messages
+django-mptt==0.7.4
 django-registration==0.7
-django-blog-zinnia
--e git+https://github.com/jonsimington/bbcode.git#egg=bbcode
--e git+https://github.com/jonsimington/pybbm.git#egg=pybb
--e git+https://github.com/jonsimington/django-contrib-comments.git#egg=django-comments
--e git+https://github.com/jonsimington/django-messages.git#egg=django-messages
-pillow
-django-bootstrap-form
-django-bootstrap3
-psycopg2
-markdown
-
+django-tagging==0.4.6
+django-xmlrpc==0.1.8
+gunicorn==19.9.0
+html5lib==1.0.1
+idna==2.7
+lockfile==0.12.2
+Markdown==2.6.11
+mots-vides==2015.5.11
+oauthlib==2.1.0
+Pillow==5.2.0
+postmarkup==1.2.2
+psycopg2==2.7.5
+-e git+https://github.com/jonsimington/pybbm.git@c257fff5da1abe06d6b299df64f7ddc516704405#egg=pybbm
+Pygments==2.2.0
+pyparsing==2.2.0
+python-openid==2.2.5
+pytz==2018.5
+regex==2018.8.29
+requests==2.19.1
+requests-oauthlib==1.0.0
+six==1.11.0
+urllib3==1.23
+webencodings==0.5.1
+Whoosh==2.7.4
