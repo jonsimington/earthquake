@@ -208,7 +208,7 @@ class ApplicationForm(forms.ModelForm):
         self.fields['screenshot'].label = "Link a screenshot of your UI during combat"
         self.fields['addons'].label = "What addons do you use?"
         self.fields['experience'].label = "Tell us about your previous raiding history.  What content did you clear and with which guilds?"
-        self.fields['how_did_you_hear'].label = "How did you hear about earthquake and why do you want to join us?"
+        self.fields['how_did_you_hear'].label = "How did you hear about Earthquake and why do you want to join us?"
         self.fields['previous_guild'].label = "Tell us about your previous guild.  What makes us a more attractive option?"
         self.fields['authenticator'].label = "Do you use an authenticator?"
         self.fields['battle_tag'].label = "Provide us your battle tag so we may contact you about your application."
