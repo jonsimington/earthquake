@@ -2,5 +2,5 @@ install:
 	pip install -r requirements.txt
 
 migrate:
-	bash migrate.sh
+	bash scripts/migrate.sh
 	python manage.py syncdb
