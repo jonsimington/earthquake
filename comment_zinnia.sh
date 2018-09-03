@@ -2,11 +2,11 @@ cd earthquake
 
 # comment urls
 mv urls.py urls.py.old
-curl -O https://gist.githubusercontent.com/jonsimington/0cdbeca6f867fcb3e0ae/raw/b9d58a5d5be487e533a9f94041e0f46dde5dbd9e/urls.py
+curl -O https://gist.githubusercontent.com/jonsimington/56c848b94761e6340516960d9b841a14/raw/32d5ee21a358fa288c30169c7588568995780832/urls.py
 
 # comment settings
 mv settings.py settings.py.old
-curl -O https://gist.githubusercontent.com/jonsimington/a52cc35705fd0b80dc70/raw/91c4a1839782dfc797fa75d3f85dab80487e46d4/settings.py
+curl -O https://gist.githubusercontent.com/jonsimington/70bad68de0889de7cf59820c50e5c0c5/raw/9bdd59736e64322d69d6aabe123be772220f2e2d/settings.py
 
 rm urls.py.old
 rm settings.py.old
