@@ -94,6 +94,7 @@ INSTALLED_APPS = (
     'earthquake.home',
     'earthquake.profiles',
     'earthquake.utility',
+    'earthquake.recruitment'
 
     # Django Allauth
     'allauth',
