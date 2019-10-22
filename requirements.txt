@@ -26,7 +26,7 @@ lockfile==0.12.2
 Markdown==2.6.11
 mots-vides==2015.5.11
 oauthlib==2.1.0
-Pillow==5.2.0
+Pillow==6.2.0
 postmarkup==1.2.2
 psycopg2==2.7.5
 -e git+https://github.com/jonsimington/pybbm.git@c257fff5da1abe06d6b299df64f7ddc516704405#egg=pybbm
