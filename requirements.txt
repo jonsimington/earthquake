@@ -1,6 +1,6 @@
 -e git+https://github.com/jonsimington/bbcode.git@08aa9253e480434637a65202824ee4c33b827942#egg=bbcode
 beautifulsoup4==4.6.3
-bleach==2.1.4
+bleach==3.3.0
 certifi==2018.8.24
 chardet==3.0.4
 Django==1.7.11
